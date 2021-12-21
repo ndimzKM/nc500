@@ -23,7 +23,7 @@ const HostelDetails = () => {
     e.preventDefault();
     // /hostels/review/:id
     axios
-      .post(`http://localhost:5000/hostels/review/${id}`, review)
+      .post(`https://cwapi-one.herokuapp.com/hostels/review/${id}`, review)
       .then((res) => {
         let { data } = res;
         setHostel(data);
@@ -52,7 +52,7 @@ const HostelDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/hostels/${id}`)
+      .get(`https://cwapi-one.herokuapp.com/hostels/${id}`)
       .then((res) => {
         let { data } = res;
         setHostel(data[0]);

@@ -23,7 +23,7 @@ function App() {
   const filterHostels = (e) => {
     e.preventDefault();
     axios
-      .get(`http://localhost:5000/hostels/search/${searchField}`)
+      .get(`https://cwapi-one.herokuapp.com/hostels/search/${searchField}`)
       .then((res) => {
         console.log(res);
         let { data } = res;

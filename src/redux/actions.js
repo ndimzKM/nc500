@@ -8,7 +8,7 @@ export const TOGGLE_MODAL = "TOGGLE_MODAL";
 
 export const setHostels = () => (dispatch) => {
   axios
-    .get("http://localhost:5000/hostels")
+    .get("https://cwapi-one.herokuapp.com/hostels")
     .then((res) => {
       let { data } = res;
       dispatch({
@@ -21,7 +21,7 @@ export const setHostels = () => (dispatch) => {
 
 export const loadItineraries = (user) => (dispatch) => {
   axios
-    .get(`http://localhost:5000/itineraries/${user}`)
+    .get(`https://cwapi-one.herokuapp.com/itineraries/${user}`)
     .then((res) => {
       let { data } = res;
       dispatch({

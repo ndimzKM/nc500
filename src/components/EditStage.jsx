@@ -37,7 +37,7 @@ const EditStage = ({ stage }) => {
 
     axios
       .post(
-        `http://localhost:5000/itineraries/stages/update/${payload.user}/${id}`,
+        `https://cwapi-one.herokuapp.com/itineraries/stages/update/${payload.user}/${id}`,
         payload.stage
       )
       .then((res) => {

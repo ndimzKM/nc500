@@ -77,7 +77,10 @@ const Modal = () => {
     };
 
     axios
-      .post(`http://localhost:5000/itineraries/new/${payload.user}`, payload)
+      .post(
+        `https://cwapi-one.herokuapp.com/itineraries/new/${payload.user}`,
+        payload
+      )
       .then((res) => {
         let { data } = res;
         console.log(data);
